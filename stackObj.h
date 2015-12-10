@@ -13,7 +13,11 @@ struct StackObjUnit{
 struct StackObjArr{
     int arr_nums;   //numbers of StackObjUnit
     struct StackObjUnit *arr_pbase;  //pointer to the address of stack base address
-    struct StackObjUnit *arr_ptop;  //pointer to the address stack top
+
+/*
+pointer to the address stack top, stack is emtpy while point to NULL
+*/
+    struct StackObjUnit *arr_ptop;
 };
 
 int stkInit(struct StackObjArr *pObjArr, int num);

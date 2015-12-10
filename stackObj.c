@@ -15,7 +15,8 @@ int stkInit(struct StackObjArr *pObjArr, int num)
     pObjArr->arr_nums = num;
     pObjArr->arr_pbase = malloc(sizeof(struct StackObjUnit) * (num + 1));
     memset(pObjArr->arr_pbase, 0, sizeof(struct StackObjUnit) * (num + 1));
-    pObjArr->arr_ptop = pObjArr->arr_pbase;
+    pObjArr->arr_ptop = NULL;
+//    pObjArr->arr_ptop = pObjArr->arr_pbase;
     (pObjArr->arr_pbase + num)->unit_ptr = NULL;
     (pObjArr->arr_pbase + num)->unit_size = -1; // Full flag
 //    for(i = 0; i < num; i++){
@@ -29,12 +30,14 @@ int stkInit(struct StackObjArr *pObjArr, int num)
 int stkPush(struct StackObjArr *pObjArr, void *ptr, int size)
 {
     /*if stack if full*/
-    if(pObjArr->arr_ptop->unit_size == -1){
-        DEBUG_E("Stack if full !\n");
-        return -1;
-    }
     if(pObjArr->arr_ptop == NULL){
+        DEBUG_E("Stack is empty, First push !\n");
         pObjArr->arr_ptop = pObjArr->arr_pbase;
+    }
+
+    if(pObjArr->arr_ptop->unit_size == -1){
+        DEBUG_E("Stack is full !\n");
+        return -1;
     }
     pObjArr->arr_ptop->unit_size = size;
     pObjArr->arr_ptop->unit_ptr = malloc(size);
@@ -59,7 +62,7 @@ int stkPop(struct StackObjArr *pObjArr, void *ptr)
         return -1;
     }
     if(pObjArr->arr_ptop == NULL){
-        DEBUG_E("Stack is empty!\n");
+        DEBUG_E("Stack is empty, Cannot pop unit!\n");
         return -1;
     }
 
@@ -77,3 +80,4 @@ int stkPop(struct StackObjArr *pObjArr, void *ptr)
 
     return 0;
 }
+
