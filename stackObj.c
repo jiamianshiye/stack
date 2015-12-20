@@ -25,6 +25,16 @@ int stkInit(struct StackObjArr *pObjArr, int num)
 
     return 0;
 }
+int stkSetName(struct StackObjArr *pObjArr, char *name)
+{
+    int name_len;
+    if(pObjArr == NULL)
+        return -1;
+    name_len = strlen(name) > STACK_NAME_LEN ? STACK_NAME_LEN : strlen(name);
+    strncpy(pObjArr->arr_name, name, name_len);
+    pObjArr->arr_name[name_len] = '\0';
+    return 0;
+}
 
 
 int stkPush(struct StackObjArr *pObjArr, void *ptr, int size)
@@ -81,3 +91,27 @@ int stkPop(struct StackObjArr *pObjArr, void *ptr)
     return 0;
 }
 
+int stkPrint(struct StackObjArr *pObjArr, CB *cbx_fun)
+{
+    int stkIndex;
+    if(pObjArr->arr_pbase == NULL)
+    {
+        DEBUG_E("Stack uninitlized !\n");
+        return -1;
+    }
+    if(pObjArr->arr_ptop == NULL){
+        DEBUG_E("Stack is empty, Cannot pop unit!\n");
+        return -1;
+    }
+    if(cbx_fun == NULL){
+        DEBUG_E("CBX arguments cannot be NULL!\n");
+        return -1;
+    }
+    printf("[ %s ] : ", pObjArr->arr_name);
+    for(stkIndex = 0; pObjArr->arr_pbase + stkIndex < pObjArr->arr_ptop; stkIndex++){
+        cbx_fun((void *)pObjArr->arr_pbase[stkIndex].unit_ptr);
+    }
+    putchar('\n');
+
+    return 0;
+}
