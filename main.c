@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
     gettimeofday(&va, NULL);
     printf("Cost of time : %d ms\n", (va.tv_sec - vp.tv_sec)*1000 + (va.tv_usec - vp.tv_usec)/1000);
 #endif
-#if 0
+#if 1
     stkInit(&stkobj, 128);
 
     maze_work(&stkobj);

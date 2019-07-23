@@ -1,0 +1,88 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AR	Makefile	/^AR            = ar cqs$/;"	m
+CB	stackObj.h	/^typedef void (CB)(int *);$/;"	t
+CC	Makefile	/^CC            = gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS        = -m64 -pipe -O2 -Wall -W -fPIC $(DEFINES)$/;"	m
+CHK_DIR_EXISTS	Makefile	/^CHK_DIR_EXISTS= test -d$/;"	m
+COMMON_H	common.h	2;"	d
+COMPRESS	Makefile	/^COMPRESS      = gzip -9f$/;"	m
+COPY	Makefile	/^COPY          = cp -f$/;"	m
+COPY_DIR	Makefile	/^COPY_DIR      = cp -f -R$/;"	m
+COPY_FILE	Makefile	/^COPY_FILE     = cp -f$/;"	m
+CXX	Makefile	/^CXX           = g++$/;"	m
+CXXFLAGS	Makefile	/^CXXFLAGS      = -m64 -pipe -O2 -Wall -W -fPIC $(DEFINES)$/;"	m
+DEBUG_E	common.h	17;"	d
+DEBUG_E	common.h	24;"	d
+DEBUG_O	common.h	12;"	d
+DEBUG_O	common.h	23;"	d
+DEFINES	Makefile	/^DEFINES       = $/;"	m
+DEL_DIR	Makefile	/^DEL_DIR       = rmdir$/;"	m
+DEL_FILE	Makefile	/^DEL_FILE      = rm -f$/;"	m
+DESTDIR	Makefile	/^DESTDIR       = #avoid trailing-slash linebreak$/;"	m
+DIST	Makefile	/^DIST          = \/usr\/lib\/x86_64-linux-gnu\/qt5\/mkspecs\/features\/spec_pre.prf \\$/;"	m
+DISTDIR	Makefile	/^DISTDIR = \/home\/cdp\/cdpwork\/stack\/.tmp\/maze_stack1.0.0$/;"	m
+DISTNAME	Makefile	/^DISTNAME      = maze_stack1.0.0$/;"	m
+HANOI	hanoi.h	2;"	d
+HANOI_NUMS	hanoi.h	4;"	d
+INCPATH	Makefile	/^INCPATH       = -I. -I\/usr\/lib\/x86_64-linux-gnu\/qt5\/mkspecs\/linux-g++-64$/;"	m
+INSTALL_DIR	Makefile	/^INSTALL_DIR   = cp -f -R$/;"	m
+INSTALL_FILE	Makefile	/^INSTALL_FILE  = install -m 644 -p$/;"	m
+INSTALL_PROGRAM	Makefile	/^INSTALL_PROGRAM = install -m 755 -p$/;"	m
+LFLAGS	Makefile	/^LFLAGS        = -m64 -Wl,-O1$/;"	m
+LIBS	Makefile	/^LIBS          = $(SUBLIBS)  $/;"	m
+LINK	Makefile	/^LINK          = g++$/;"	m
+MAKEFILE	Makefile	/^MAKEFILE      = Makefile$/;"	m
+MAX_COL	maze.c	7;"	d	file:
+MAX_ROW	maze.c	6;"	d	file:
+MAZE_H	maze.h	2;"	d
+MKDIR	Makefile	/^MKDIR         = mkdir -p$/;"	m
+MOVE	Makefile	/^MOVE          = mv -f$/;"	m
+MazePoint	maze.h	/^struct MazePoint{$/;"	s
+OBJECTS	Makefile	/^OBJECTS       = main.o \\$/;"	m
+OBJECTS_DIR	Makefile	/^OBJECTS_DIR   = .\/$/;"	m
+PrtVecStr	maze.c	/^static char *PrtVecStr(int index)$/;"	f	file:
+QMAKE	Makefile	/^QMAKE         = \/usr\/lib\/x86_64-linux-gnu\/qt5\/bin\/qmake$/;"	m
+QMAKE_TARGET	Makefile	/^QMAKE_TARGET  = maze_stack$/;"	m
+RANLIB	Makefile	/^RANLIB        = $/;"	m
+SED	Makefile	/^SED           = sed$/;"	m
+SOURCES	Makefile	/^SOURCES       = main.c \\$/;"	m
+STACKOBJ_H	stackObj.h	2;"	d
+STACK_NAME_LEN	stackObj.h	7;"	d
+STRIP	Makefile	/^STRIP         = strip$/;"	m
+SYMLINK	Makefile	/^SYMLINK       = ln -f -s$/;"	m
+StackObjArr	stackObj.h	/^struct StackObjArr{$/;"	s
+StackObjUnit	stackObj.h	/^struct StackObjUnit{$/;"	s
+TAR	Makefile	/^TAR           = tar -cf$/;"	m
+TARGET	Makefile	/^TARGET        = maze_stack$/;"	m
+Vector	maze.h	/^struct Vector{$/;"	s
+__DEBUG__	common.h	10;"	d
+arr_name	stackObj.h	/^    char arr_name[STACK_NAME_LEN];$/;"	m	struct:StackObjArr
+arr_nums	stackObj.h	/^    int arr_nums;   \/\/numbers of StackObjUnit$/;"	m	struct:StackObjArr
+arr_pbase	stackObj.h	/^    struct StackObjUnit *arr_pbase;  \/\/pointer to the address of stack base address$/;"	m	struct:StackObjArr	typeref:struct:StackObjArr::StackObjUnit
+arr_ptop	stackObj.h	/^    struct StackObjUnit *arr_ptop;$/;"	m	struct:StackObjArr	typeref:struct:StackObjArr::StackObjUnit
+col	maze.h	/^    int col;$/;"	m	struct:MazePoint
+hanoi	hanoi.c	/^int hanoi()$/;"	f
+hanoi_cbx	hanoi.c	/^void hanoi_cbx(int *pa)$/;"	f
+main	main.c	/^int main(int argc, char *argv[])$/;"	f
+maze	maze.c	/^int maze[MAX_ROW][MAX_COL] = {$/;"	v
+maze_work	maze.c	/^int maze_work(struct StackObjArr *pObjArr)$/;"	f
+move	hanoi.c	/^static move(struct StackObjArr *psrc, int num,  struct StackObjArr *pdest)$/;"	f	file:
+print_maze	maze.c	/^static void print_maze(void)$/;"	f	file:
+process	hanoi.c	/^static void process(int num, struct StackObjArr *pstkA, struct StackObjArr *pstkB$/;"	f	file:
+row	maze.h	/^    int row;$/;"	m	struct:MazePoint
+stkInit	stackObj.c	/^int stkInit(struct StackObjArr *pObjArr, int num)$/;"	f
+stkPop	stackObj.c	/^int stkPop(struct StackObjArr *pObjArr, void *ptr)$/;"	f
+stkPrint	stackObj.c	/^int stkPrint(struct StackObjArr *pObjArr, CB *cbx_fun)$/;"	f
+stkPush	stackObj.c	/^int stkPush(struct StackObjArr *pObjArr, void *ptr, int size)$/;"	f
+stkSetName	stackObj.c	/^int stkSetName(struct StackObjArr *pObjArr, char *name)$/;"	f
+stkobj	main.c	/^struct StackObjArr stkobj;$/;"	v	typeref:struct:StackObjArr
+unit_ptr	stackObj.h	/^    void *unit_ptr;$/;"	m	struct:StackObjUnit
+unit_size	stackObj.h	/^    int unit_size;  \/\/unit size, 0-empty, >0-have data, -1 stack full flag$/;"	m	struct:StackObjUnit
+vec_col	maze.h	/^    int vec_col;$/;"	m	struct:Vector
+vec_row	maze.h	/^    int vec_row;$/;"	m	struct:Vector
+vt	maze.c	/^struct Vector vt[4] = {{1, 0}, {0, 1}, {-1, 0}, {0, -1}};$/;"	v	typeref:struct:Vector
